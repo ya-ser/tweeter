@@ -1,0 +1,42 @@
+header {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  padding: 1.5em;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: #809DFF;
+  background-image: url("http://www.transparenttextures.com/patterns/cartographer.png");
+  /* border: 10px #000000 solid; */
+}
+
+.imgName {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 10px #000000 solid; */
+}
+
+/* #profilePic {
+  display: flex;
+  margin-top: 30px;
+} */
+
+h3 {
+  margin-top: 0.7em;
+}
+
+#lastname {
+  font-weight: 300;
+}
+
+.username {
+  display: flex;
+  align-items: baseline; 
+  color: #ffffff;
+  position: relative;
+  bottom: 50px;
+  font-size: xx-large;
+}

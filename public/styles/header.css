@@ -12,10 +12,12 @@ header {
 }
 
 .imgName {
+  margin: 0 auto;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 120px;
   /* border: 10px #000000 solid; */
 }
 

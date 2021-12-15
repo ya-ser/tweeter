@@ -1,0 +1,28 @@
+.tweetContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#tweet-text {
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid black;
+  width: 100%;
+  height: 41px;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+#tweetButton{
+  background-color: #4056a1;
+  box-shadow: #212942 4px 4px;
+  color: #ffffff;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}

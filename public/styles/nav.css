@@ -15,8 +15,12 @@ nav {
 
 .logo {
   font-size: xx-large;
-  text-shadow: #2C3B6E 7px 7px;
+  transition: text-shadow .3s;
   font-family: 'Bungee', cursive;
+}
+
+.logo:hover {
+  text-shadow: #2C3B6E 7px 7px;
 }
 
 .arrowPost {

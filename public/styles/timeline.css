@@ -1,0 +1,83 @@
+.timeline {
+  margin-top: 45px;
+  border: #545149 solid 4px;
+  border-radius: 30px 30px 30px 5px;
+  transition: box-shadow .3s;
+}
+
+.timeline:hover {
+  box-shadow: 10px 10px #6b82cd;
+}
+
+.username {
+  width: 100%;
+  margin-top: 8px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 10px;
+}
+
+.userTag {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 45px;
+  color: #6b82cd;
+  font-size: smaller;
+}
+
+.user {
+  width: 100%;
+  margin-left: 20px;
+  color:#545149;
+  font-size: smaller;
+}
+
+.comment {
+  margin-left: 35px;
+  position: relative;
+  top: 3px;
+}
+
+.dateIcon {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+  bottom: 20px;
+}
+
+.datePosted {
+  margin-left: 35px;
+  font-size: smaller;
+  height: 4px;
+}
+
+.postIcons {
+  margin-right: 45px;
+  font-size: 15px;
+  color: #4056a1;
+}
+
+.line {
+  height: 4px;
+  background-color: #545149;
+  width: 95%;
+  position: relative;
+  bottom: 4px;
+}
+
+.fa-flag:hover {
+  color: rgb(228, 170, 11);
+}
+
+.fa-retweet:hover {
+  color: rgb(228, 170, 11);
+}
+
+.fa-heart:hover {
+  color: rgb(228, 170, 11);
+}

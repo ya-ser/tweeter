@@ -34,7 +34,7 @@ h3 {
   font-weight: 300;
 }
 
-.username {
+.profileName {
   display: flex;
   align-items: baseline; 
   color: #ffffff;

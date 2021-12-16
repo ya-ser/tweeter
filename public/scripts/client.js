@@ -12,8 +12,15 @@ $(document).ready(function () {
     // takes return value and appends it to the tweets container
     for (let tweet of tweets) {
       let $eachTweet = createTweetElement(tweet);
+      // tweets posted are in decending order
       $("#tweets-container").prepend($eachTweet);
     }
+  };
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   const loadTweets = function() {
@@ -36,10 +43,10 @@ $(document).ready(function () {
               <div class="username">
                 <!-- keeps image on the same line as name -->
                 <img src=${tweet.user.avatars}>
-                <p class="user">${tweet.user.name}</p>
-                <p class="userTag">${tweet.user.handle}</p>
+                <p class="user">${escape(tweet.user.name)}</p>
+                <p class="userTag">${escape(tweet.user.handle)}</p>
               </div>
-              <p class="comment"><b>${tweet.content.text}</b></p>
+              <p class="comment"><b>${escape(tweet.content.text)}</b></p>
               <hr class="line">
               <div class="dateIcon">
                 <p class="datePosted">${date}</p>

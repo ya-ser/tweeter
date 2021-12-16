@@ -70,6 +70,18 @@
   bottom: 4px;
 }
 
+.fa-flag {
+  transition: color .2s;
+}
+
+.fa-retweet {
+  transition: color .2s;
+}
+
+.fa-heart {
+  transition: color .2s;
+}
+
 .fa-flag:hover {
   color: rgb(228, 170, 11);
 }

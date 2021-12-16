@@ -6,6 +6,8 @@
 
 #tweet-text {
   border: none;
+  font-weight: bolder;
+  color: #545149;
   outline: none;
   background-color: transparent;
   border-bottom: 4px solid #545149;

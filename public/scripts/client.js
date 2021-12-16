@@ -57,6 +57,17 @@ $(document).ready(function () {
   
   $("#tweetCompose").submit(function (event) {
     event.preventDefault();
+    const textPost = $("#tweet-text").val();
+    if (textPost.length > 140) {
+      alert("Character limit reached.");
+      return;
+    } else if (textPost === "") {
+      alert("fill this out");
+      return;
+    } else if (textPost === null) {
+      alert("HOW???");
+      return;
+    }
     const data = $(this).serialize();
     $.ajax({
       method: "POST",

@@ -37,8 +37,11 @@
 
 .comment {
   margin-left: 35px;
+  margin-right: 40px;
   position: relative;
   top: 3px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .dateIcon {

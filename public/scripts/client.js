@@ -12,22 +12,22 @@ $(document).ready(function () {
     // takes return value and appends it to the tweets container
     for (let tweet of tweets) {
       let $eachTweet = createTweetElement(tweet);
-      $("#tweets-container").append($eachTweet);
+      $("#tweets-container").prepend($eachTweet);
     }
   };
 
   const loadTweets = function() {
     $.ajax({
       method: "GET",
-      url: "http://localhost:8080/tweets",
+      url: "http://localhost:8080/tweets/",
       complete: function(data){
         renderTweets(data.responseJSON);
       }
     });
   };
-
-  loadTweets();
   
+  loadTweets();
+
   const createTweetElement = function(tweet) {
     const date = timeago.format(tweet.created_at);
     const $tweet = `
@@ -62,9 +62,7 @@ $(document).ready(function () {
       method: "POST",
       url: "http://localhost:8080/tweets/",
       data,
-      success: function() {
-        console.log('Data was succesfully captured');
-      }
+      success: loadTweets
     });
   });
 });

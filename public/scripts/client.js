@@ -68,5 +68,15 @@ $(document).ready(function () {
     return $tweet;
   };
   
+  $("#tweetCompose").submit(function (event) {
+    event.preventDefault();
+    const data = $(this).serialize();
+    console.log('test');
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:8080/tweets/",
+      data
+    });
+  });
   renderTweets(data);
 });

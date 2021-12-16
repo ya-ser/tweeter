@@ -4,6 +4,10 @@
   margin-top: 10px;
 }
 
+.textarea {
+  padding-top: 1em;
+}
+
 #tweet-text {
   border: none;
   font-weight: bolder;
@@ -32,4 +36,14 @@
 
 .counter {
   font-family: 'Bungee', cursive;
+}
+
+.error {
+  color: #d31010;
+  display: none;
+  text-align: center;
+  width: 100%;
+  border: solid #d31010;
+  justify-content: center;
+  font-family: Bungee;
 }

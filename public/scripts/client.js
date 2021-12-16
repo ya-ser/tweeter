@@ -62,25 +62,23 @@ $(document).ready(function () {
     return $tweet;
   };
   
-  $("#tweetCompose").submit(function (event) {
+  $("#tweetCompose").on("submit", function(event) {
     event.preventDefault();
-    const textPost = $("#tweet-text").val();
-    if (textPost.length > 140) {
-      alert("Character limit reached.");
-      return;
-    } else if (textPost === "") {
-      alert("fill this out");
-      return;
-    } else if (textPost === null) {
-      alert("HOW???");
-      return;
-    }
-    const data = $(this).serialize();
-    $.ajax({
+    const charCount = $("#tweet-text").val();
+    $(".error").slideUp();
+    if (charCount.length > 140) {
+      $('.error').text("You're rambling! (Character limit reached)").slideDown();
+    } else if (charCount === "") {
+      $('.error').text("Fill this out").slideDown();
+    } else {
+      const data = $(this).serialize();
+      $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets/",
       data,
       success: loadTweets
     });
+    }
+    $("#tweet-text").val("");
   });
 });

@@ -14,7 +14,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Desktop View](https://gfycat.com/sentimentalpalebronco)
+![Desktop View](gifs/destop-viewTweeter.gif)
 
 ## Dependencies
 

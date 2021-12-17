@@ -15,7 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 ![Desktop View](gifs/destop-viewTweeter.gif)
-![Mobile View](gifs/destop-viewTweeter.gif)
+![Mobile View](gifs/tweeter-longTweet.gif)
 
 ## Dependencies
 

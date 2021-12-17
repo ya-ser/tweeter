@@ -14,7 +14,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Alt Text](https://gfycat.com/sentimentalpalebronco)
+![Desktop View](tweeter/gifs/destop-viewTweeter.gif)
 
 ## Dependencies
 
@@ -24,3 +24,5 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 - timeago.js
 - node 5.10.x or above
+
+This is a long tweet. 

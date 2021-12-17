@@ -6,7 +6,7 @@
 }
 
 .timeline:hover {
-  box-shadow: 10px 10px #6b82cd;
+  box-shadow: 10px 10px hsl(226, 49%, 61%);
 }
 
 .username {
@@ -95,4 +95,11 @@
 
 .fa-heart:hover {
   color: rgb(228, 170, 11);
+}
+
+@media only screen and (min-width: 1024px) {
+  #tweetCompose {
+    width: 70%;
+    float: right;
+  }
 }

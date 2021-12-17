@@ -26,12 +26,14 @@
 #tweetButton {
   background-color: #4056a1;
   transition: box-shadow .3s;
+  transition: all .2s ease-in-out;
   color: #ffffff;
   font-family: 'Bungee', cursive;
 }
 
 #tweetButton:hover {
   box-shadow: #212942 4px 4px;
+  transform: scale(1.1);
 }
 
 .counter {
@@ -46,4 +48,11 @@
   border: solid #d31010;
   justify-content: center;
   font-family: Bungee;
+}
+
+@media only screen and (min-width: 1024px) {
+  .error {
+    width: 70%;
+    float: right;
+  }
 }

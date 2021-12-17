@@ -1,11 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Test / driver code (temporary). Eventually will get this from the server.
-$(document).ready(function () {
+$(document).ready(() => {
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -17,17 +10,19 @@ $(document).ready(function () {
     }
   };
 
-  const escape = function (str) {
+  // Prevents XSS by re-encoding text characters into a safe encoded representation
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  const loadTweets = function() {
+  // fetches tweets from /tweets/ page
+  const loadTweets = () => {
     $.ajax({
       method: "GET",
       url: "http://localhost:8080/tweets/",
-      complete: function(data){
+      complete: function(data) {
         renderTweets(data.responseJSON);
       }
     });
@@ -35,6 +30,7 @@ $(document).ready(function () {
   
   loadTweets();
 
+  // takes in tweets and applies html structure
   const createTweetElement = function(tweet) {
     const date = timeago.format(tweet.created_at);
     const $tweet = `
@@ -58,27 +54,33 @@ $(document).ready(function () {
                 </div>
               </div>
             </article>
-          </section>`
+          </section>`;
     return $tweet;
   };
   
-  $("#tweetCompose").on("submit", function(event) {
+  // event listener that checks for submit event
+  $("#tweetCompose").submit(function(event) {
+    // prevents default behaviour of the submit event
     event.preventDefault();
     const charCount = $("#tweet-text").val();
-    $(".error").slideUp();
+    $(".error").slideUp("fast");
     if (charCount.length > 140) {
-      $('.error').text("You're rambling! (Character limit reached)").slideDown();
+      $('.error').text("You're rambling! (Character limit reached)").slideDown("fast");
     } else if (charCount === "") {
-      $('.error').text("Fill this out").slideDown();
+      $('.error').text("Fill this out").slideDown("fast");
     } else {
       const data = $(this).serialize();
+      // ajax post request sends the form data to the server
       $.ajax({
-      method: "POST",
-      url: "http://localhost:8080/tweets/",
-      data,
-      success: loadTweets
-    });
+        method: "POST",
+        url: "http://localhost:8080/tweets/",
+        data,
+        success: loadTweets
+      });
     }
+    // clears text area after post
     $("#tweet-text").val("");
+    // resets counter after post
+    $(".counter").val(140);
   });
 });

@@ -3,10 +3,12 @@
   border: #545149 solid 4px;
   border-radius: 30px 30px 30px 5px;
   transition: box-shadow .3s;
+  transition: all .2s ease-in-out;
 }
 
 .timeline:hover {
   box-shadow: 10px 10px hsl(226, 49%, 61%);
+  transform: scale(1.03);
 }
 
 .username {
@@ -101,5 +103,11 @@
   #tweetCompose {
     width: 70%;
     float: right;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-left: 40px
   }
 }

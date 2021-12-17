@@ -42,6 +42,7 @@
 
 .error {
   color: #d31010;
+  background: rgb(247, 200, 200);
   display: none;
   text-align: center;
   width: 100%;

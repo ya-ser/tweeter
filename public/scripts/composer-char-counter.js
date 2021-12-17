@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
   $('#tweet-text').keyup('input', function() {
     // minuses total text limit (140) by each character passed in the tweet-text field 

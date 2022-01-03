@@ -75,11 +75,20 @@ $(document).ready(() => {
         method: "POST",
         url: "http://localhost:8080/tweets/",
         data,
-        success: loadTweets
+        // on successful post
+        success: function() {
+          // clear text area
+          $('textarea').val('');
+          // short ajax get request to get all the tweets from url
+          $.get('/tweets/', function(response) {
+            // take the most recent tweet from array
+            const lastTweet = response.slice(-1);
+            // renders the last tweet from array
+            renderTweets(lastTweet);
+          });
+        }
       });
     }
-    // clears text area after post
-    $("#tweet-text").val("");
     // resets counter after post
     $(".counter").val(140);
   });

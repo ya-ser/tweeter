@@ -32,11 +32,6 @@ nav {
   align-items: center;
 }
 
-/* #arrow {
-  align-items: center;
-  color: #FFF8DC;
-} */
-
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
 		-webkit-transform: translateY(0);
